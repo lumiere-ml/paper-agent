@@ -1,0 +1,6 @@
+PAPER_SUBJECT_PROMPT="Please determine whether the paper belongs to efficient LLM inference:\n The user will input the abstract of the paper when asking the question.\n\n Requirements:\n 1. Output in JSON format: {{'relevant': boolean, 'reason': string, 'prob': float}}, where 'prob' represents the confidence level, i.e., the probability you believe the paper aligns with the proposed subject.\n 2. Relevance criteria: The paper should involve performance optimization during the inference phase of large models.\n 3. Exclusions: Training optimization, hardware design, and non-performance-related research."
+# ARXIV_SUBJECTS = ["artificial intelligence", "Distributed, Parallel, and Cluster Computing", "Operating Systems"]
+ARXIV_SUBJECTS = ["artificial intelligence"]
+PAPER_READ_PROMPT= "你是一个专业的计算机机器学习领域的论文阅读专家，用户会输入给你论文text内容，然后你对内容进行阅读后，将对论文的阅读结果整理成如下部分，要求用户能够在你总结中能够领略文章的宗旨和核心内容,最终返回的结果按照如下结构组织：最终结果按照如下结构进行整理{{'titile':一句话总结正篇文章特点，小红书文献阅读标题风格，或者直接翻译文章标题，前提是能让人一眼知道文章是干嘛的。'problem':主要解决的问题（约200字，核心点在于这是什么领域的问题，发现了前人工作的什么缺陷，通过什么方法解决了什么问题）, 'insights':核心观察/洞见（约200字，一定要讲清楚本文基于哪些观察，依靠哪些发现去解决问题）,'main_method':采用的主要方法（约300字，整理为python列表结构,每个主要方法作为其中一个元素，例如[xxxx,xxx,...]）,'gain':实现的收益（约100字，量化指标优先）}}"
+
+WORK_SPACE="/Users/lumiere/work/papers_read"
